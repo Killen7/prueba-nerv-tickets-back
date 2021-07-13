@@ -12,6 +12,9 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json());
 
 //routes
+app.get('/', (req, res) => {
+    res.send("La ruta para obtener los tickets es /tickets")
+})
 app.use(require('./routes/ticketsRouter'));
 
 //iniciando el servidor
